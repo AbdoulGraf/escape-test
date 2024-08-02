@@ -45,7 +45,9 @@ body {
 	background: #000000 !important;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
-	font-family: 'Oswald', sans-serif;
+	/* font-family: 'Oswald', sans-serif; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 a {
@@ -88,6 +90,7 @@ p {
 	font-size: 16px;
 	line-height: 1.6em;
 	margin: 0 0 15px;
+	font-weight: 400;
 }
 
 ::-webkit-input-placeholder {
@@ -113,7 +116,7 @@ p {
 
 .auto-container {
 	position: static;
-	max-width: 1200px;
+	max-width: 1600px;
 	padding: 0px 15px;
 	margin: 0 auto;
 }
@@ -162,9 +165,9 @@ figure {
 	position: relative;
 	display: block;
 	z-index: 1;
-	padding: 16px 45px;
+	padding: 15px 15px !important;
 	/* background: #C10B13; */
-	background: url("../Images/icons/header_top.svg");
+	background: url("../Images/icons/header_top.webp");
 	background-repeat: no-repeat;
 	background-size: contain;
 	border-radius: 0px;
@@ -175,13 +178,39 @@ figure {
 	-o-transition: all 0.3s ease;
 }
 
+.vr_game_features .btn-style-one .btn-title {
+
+	position: relative;
+	display: block;
+	z-index: 1;
+	padding: 40px 60px !important;
+	/* background: #C10B13; */
+	background: url("../Images/icons/rooms_icons/vrgames.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-radius: 0px;
+	transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+
+}
+
+
+
+
+
+
+
+
 .btn-style-one:hover {
 	text-decoration: none;
 }
 
 .btn-style-one:hover .btn-title {
 	color: #ffffff;
-	box-shadow: 0px 0px 20px 0px #C10B13;
+	/* box-shadow: 0px 0px 20px 0px #C10B13; */
 	text-decoration: none;
 }
 
@@ -254,6 +283,8 @@ figure {
 .top_header-social a {
 	color: white;
 	text-decoration: none;
+	display: flex;
+	align-items: center;
 }
 
 .top_header-social i {
@@ -518,7 +549,7 @@ img {
 
 .main-header .header-container {
 	position: relative;
-	max-width: 1200px;
+	max-width: 1600px;
 	margin: 0 auto;
 }
 
@@ -805,7 +836,7 @@ img {
 	position: relative;
 	float: left;
 	padding: 21px 0px;
-	margin-right: 23px;
+	/* margin-right: 23px; */
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -818,7 +849,7 @@ img {
 		margin-right: 0px !important;
 	}
 
-	section{
+	section {
 		padding: 30px;
 	}
 }
@@ -838,17 +869,18 @@ img {
 }
 
 .main-menu .navigation>li>a {
+	padding: 10px 40px !important;
 	position: relative;
 	display: block;
 	text-align: center;
-	font-size: 14px;
-	line-height: 28px;
+	font-size: 18px;
+	/* line-height: 38px; */
 	font-weight: 400;
 	text-transform: uppercase;
 	color: #ffff;
 	/* padding: 12px 0px 10px; */
-	padding: 0px 12px;
-	letter-spacing: 0.05em;
+	/* padding: 0px 20px; */
+	/* letter-spacing: 0.05em; */
 	opacity: 1;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
@@ -872,12 +904,29 @@ img {
 	/* border: 2px solid #C10B13; */
 	/* border: 2px solid transparent; */
 	position: relative;
-	background: url(../Images/icons/header_top.svg) no-repeat center;
+	background: url(../Images/icons/header_bar.svg) no-repeat center;
 	background-size: contain;
 	/* border: 1px solid  #C10B13; */
 
+}
+
+
+.main-menu .navigation>li:hover>.vr_game_background, .main-menu .navigation>li.current>.vr_game_background{
+	padding: 10px 40px !important;
+
+	-webkit-text-shadow: 0px 0px 30px rgba(8, 210, 255, 1), 0px 0px 30px rgba(8, 210, 255, 1);
+	-ms-text-shadow: 0px 0px 30px rgba(8, 210, 255, 1), 0px 0px 30px rgba(8, 210, 255, 1);
+	text-shadow: 0px 0px 30px rgba(8, 210, 255, 1), 0px 0px 30px rgba(8, 210, 255, 1);
+	color: #ffff;
+	
+	position: relative;
+	background: url(../Images/icons/rooms_icons/vrgames.svg) no-repeat center;
+	background-size: cover;
 
 }
+
+
+
 
 
 .main-menu .navigation>li.current>a::before {
@@ -1313,12 +1362,20 @@ img {
 	visibility: visible;
 }
 
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1600px !important;
+    }
+}
+
+
+
 .fixed-header .sticky-header .logo {
 	padding: 10px 0px;
 }
 
 .sticky-header .main-menu .navigation>li {
-	margin-left: 30px !important;
+	/* margin-left: 30px !important; */
 	padding: 0;
 	margin-right: 0;
 	background-color: transparent;
@@ -1330,12 +1387,12 @@ img {
 }
 
 .sticky-header .main-menu .navigation>li>a {
-	padding: 20px 1px !important;
-	line-height: 30px;
-	font-size: 15px;
-	font-weight: 600;
+	padding: 10px 30px !important;
+	/* line-height: 30px; */
+	font-size: 18px;
+	font-weight: 400;
 	color: #25283a;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	-webkit-transition: all 300ms ease;
 	-moz-transition: all 300ms ease;
 	-ms-transition: all 300ms ease;
@@ -3365,7 +3422,7 @@ img {
 
 .news-section {
 	position: relative;
-	padding: 150px 0px 130px;
+	padding: 100px 0px 130px;
 	background: #FFFFFF;
 	border-top-left-radius: 50px;
 	border-top-right-radius: 50px;
@@ -3468,16 +3525,16 @@ img {
 	margin-bottom: 3px;
 	overflow: hidden;
 	right: 0;
-	top: -40px;
+	top: -140px;
 }
 
 .news-block .over-box .date .date-title {
 	position: relative;
 	display: block;
 	z-index: 1;
-	padding: 4px 15px;
+	padding: 10px !important;
 	/* background: #C10B13; */
-	background: url("../Images/icons/header_top.svg");
+	background: url("../Images/icons/header_top.webp");
 	background-size: contain;
 	background-repeat: no-repeat;
 	border-radius: 0px;
@@ -3490,41 +3547,43 @@ img {
 
 
 @media (max-width: 1025px) {
-    
-	.blog_home_show_section .over-box .date{
-		top: -130px  !important;
+
+	.blog_home_show_section .over-box .date {
+		top: -130px !important;
 	}
-	.blog_home_last_two .over-box .date{
+
+	.blog_home_last_two .over-box .date {
 		top: -110px !important;
 	}
 
-	.all_blogs_section .over-box .date{
+	.all_blogs_section .over-box .date {
 		top: 3px !important;
 	}
 
 }
 
 @media (max-width: 769px) {
-    
-	.blog_home_show_section .over-box .date{
-		top: -290px  !important;
+
+	.blog_home_show_section .over-box .date {
+		top: -290px !important;
 	}
-	.blog_home_last_two .over-box .date{
+
+	.blog_home_last_two .over-box .date {
 		top: -210px !important;
 	}
 
-	.all_blogs_section .over-box .date{
+	.all_blogs_section .over-box .date {
 		top: -70px !important;
 	}
 
 }
 
 @media (max-width: 468px) {
-    
-	.blog_home_show_section .over-box .date{
-		top: -110px  !important;
+
+	.blog_home_show_section .over-box .date {
+		top: -110px !important;
 	}
-	
+
 
 }
 
@@ -4628,8 +4687,8 @@ img {
 	width: 100%;
 	height: 100%;
 	/* background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 50%, rgba(0, 0, 0, 1)); */
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 1));
-	z-index: 1;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.92), rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 1));
+	/* z-index: 1; */
 	pointer-events: none;
 }
 
@@ -4700,18 +4759,22 @@ img {
 	display: block;
 	width: 100%;
 	max-width: 100%;
+	max-width: 380px;
+	margin-top: 70px;
 }
 
 .about-section .text-column {
 	position: relative;
 	margin-bottom: 30px;
 	order: 12;
+	margin-left: -150px;
 }
 
 .about-section .text-column .inner {
 	position: relative;
 	display: block;
 	font-weight: 400;
+	/* padding-top: 60px; */
 }
 
 .about-section .text-column .sec-title {
@@ -4846,6 +4909,7 @@ img {
 }
 
 .cont-info-section .info-block h3 {
+	margin-top: 20px;
 	position: relative;
 	font-size: 23px;
 	font-weight: 400;

@@ -3,109 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Request Form</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Event Selection</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('background.jpg') no-repeat center center fixed; 
-            background-size: cover;
-            margin: 0;
-            padding: 0;
+        .form-row {
             display: flex;
-            justify-content: center;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .radio-btn {
+            display: flex;
             align-items: center;
-            height: 100vh;
+            cursor: pointer;
         }
-        .form-container {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            width: 100%;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+        .radio-btn input[type="radio"] {
+            display: none;
         }
-        .form-container h2 {
-            color: #fff;
-            text-align: center;
-            margin-bottom: 20px;
+
+        .radio-btn svg {
+            margin-right: 8px;
         }
-        .form-container label {
-            color: #fff;
-        }
-        .form-container .form-control {
-            background: #222;
-            border: 1px solid #333;
-            color: #fff;
-        }
-        .form-container .custom-control-label {
-            color: #fff;
-        }
-        .form-container .custom-radio .custom-control-input:checked~.custom-control-label::before {
-            background-color: #f00;
-        }
-        .form-container .btn-submit {
-            width: 100%;
-            background: #f00;
-            border: none;
-            color: #fff;
+
+        .radio-btn label {
+            color: rgba(108, 108, 108, 1);
+            font-weight: 100;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>Event Request Form</h2>
-        <form>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="text" class="form-control" id="phoneNumber" placeholder="Phone Number">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="phone">Phone</label>
-                    <input type="text" class="form-control" id="phone" placeholder="Phone">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Choose Your Event</label>
+            <div class="radio-btns">
+                <div class="radio-btn" id="birthday-btn" onclick="toggleSVG('birthdayEvent')">
+                    <input type="radio" id="birthdayEvent" name="event" value="birthday">
+                    <svg id="birthdaySVG" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11.5" cy="11.5" r="10.7812" stroke="#D9D9D9" stroke-width="1.4375"/>
+                    </svg>
+                    <label for="birthdayEvent">Birthday Event</label>
                 </div>
             </div>
-            <div class="form-group">
-                <label>Choose Your Event</label>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="birthdayEvent" name="event" class="custom-control-input">
-                    <label class="custom-control-label" for="birthdayEvent">Birthday Event</label>
-                </div>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="corporateEvent" name="event" class="custom-control-input" checked>
-                    <label class="custom-control-label" for="corporateEvent">Corporate Event</label>
-                </div>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="requestFranchise" style="visibility: hidden;">Request Franchise</label>
+            <div class="radio-btn" id="corporate-btn" onclick="toggleSVG('corporateEvent')">
+                <input type="radio" id="corporateEvent" name="event" value="corporate" checked>
+                <svg id="corporateSVG" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11.5" cy="11.5" r="10.7812" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="1.4375"/>
+                </svg>
+                <label for="corporateEvent">Corporate Event</label>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="date">Date</label>
-                    <input type="date" class="form-control" id="date">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="time">Time</label>
-                    <input type="time" class="form-control" id="time">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="request">Type Your Request</label>
-                <textarea class="form-control" id="request" rows="3" placeholder="Type your request"></textarea>
-            </div>
-            <button type="submit" class="btn btn-submit">Submit</button>
-        </form>
+        </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleSVG(selectedRadioId) {
+            const radioButton = document.getElementById(selectedRadioId);
+            const birthdaySVG = document.getElementById('birthdaySVG');
+            const corporateSVG = document.getElementById('corporateSVG');
+
+            // Set the checked state of the radio button
+            radioButton.checked = true;
+
+            // Update the SVGs based on the checked radio button
+            if (selectedRadioId === 'birthdayEvent') {
+                birthdaySVG.innerHTML = '<circle cx="11.5" cy="11.5" r="10.7812" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="1.4375"/>';
+                corporateSVG.innerHTML = '<circle cx="11.5" cy="11.5" r="10.7812" stroke="#D9D9D9" stroke-width="1.4375"/>';
+            } else {
+                corporateSVG.innerHTML = '<circle cx="11.5" cy="11.5" r="10.7812" fill="#D9D9D9" stroke="#D9D9D9" stroke-width="1.4375"/>';
+                birthdaySVG.innerHTML = '<circle cx="11.5" cy="11.5" r="10.7812" stroke="#D9D9D9" stroke-width="1.4375"/>';
+            }
+        }
+    </script>
 </body>
 </html>

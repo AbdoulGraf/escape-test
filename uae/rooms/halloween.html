@@ -29,6 +29,53 @@
             href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
         <style>
+
+            /* custom header heer */
+
+            .flatpickr-custom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(66, 66, 66, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.current-year-month {
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+
         /* Flatpickr custom styles */
         .flatpickr-calendar {
             background-color: #171717;
@@ -36,8 +83,19 @@
             -webkit-box-shadow:none;
             box-shadow: none;
         }
+        
+        .flatpickr-day.selected{
+
+            background: rgba(65, 65, 65, 1);
+            color: rgba(255, 255, 255, 1);
+    border-color: rgba(65, 65, 65, 1);
+        }
+
+
+
         .flatpickr-day {
-            color: white;
+            color: rgba(255, 255, 255, 1);
+            font-weight: 100;
         }
         .flatpickr-day.today {
             background-color: #414141;
@@ -53,9 +111,10 @@
         }
 
         .flatpickr-months{
-            background-color: #424242;
+            /* background-color: #424242;
             border-top-right-radius: 5px;
-            border-top-left-radius: 5px;
+            border-top-left-radius: 5px; */
+            /* display: none; */
         }
 
         .flatpickr-months .flatpickr-month{
@@ -129,16 +188,33 @@ color: #414141;
 
                                     <div class="top_header-social">
 
-                                        Follow
+                                        <div>
+                                            Follow
+                                        </div>
                                         <ul>
-                                            <li><a href="#"><i
-                                                        class="fab fa-youtube"></i></a></li>
-                                            <li><a href="#"><i
-                                                        class="fab fa-facebook"></i></a></li>
-                                            <li><a href="#"><i
-                                                        class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i
-                                                        class="fab fa-whatsapp"></i></a></li>
+
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/YouTube.webp"
+                                                        alt>
+
+                                                </a></li>
+
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/Facebook.webp"
+                                                        alt>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/Instagram.webp"
+                                                        alt>
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/Group23.webp"
+                                                        alt>
+                                                </a></li>
                                         </ul>
 
                                     </div>
@@ -173,7 +249,7 @@ color: #414141;
                         <div class="inner-container clearfix">
                             <!--Logo-->
                             <div class="logo-box">
-                                <div class="logo"><a href="#"
+                                <div class="logo"><a href="../homePage.html"
                                         title="Escape House - Scariest Escape Rooms"><img
                                             src="../../Images/uae/logo-menu.webp"
                                             alt="Escape House - Scariest Escape Rooms"
@@ -193,7 +269,7 @@ color: #414141;
                                         class="collapse navbar-collapse show clearfix"
                                         id="navbarSupportedContent">
                                         <ul class="navigation clearfix">
-                                            <li class><a
+                                            <li><a
                                                     href="../homePage.html">Home</a>
 
                                             </li>
@@ -202,7 +278,7 @@ color: #414141;
 
                                             </li>
                                             <li class="current"><a
-                                                    href="halloween.html">Escape
+                                                    href="../rooms/halloween.html">Escape
                                                     Rooms</a>
 
                                             </li>
@@ -240,12 +316,13 @@ color: #414141;
                 <!-- Sticky Header  -->
                 <div class="sticky-header">
                     <div class="auto-container clearfix"
-                        style="display: flex; align-items: center;">
+                        style="display: flex; align-items: center; justify-content: space-between;">
                         <!--Logo-->
                         <div class="logo pull-left">
-                            <a href="index.html" title><img
+                            <a href="../homePage.html" title><img
                                     src="../../Images/uae/logo-menu.webp" alt
                                     title></a>
+
                         </div>
                         <!--Right Col-->
                         <div class="pull-right">
@@ -264,26 +341,12 @@ color: #414141;
                             class="icon flaticon-cancel"></span></div>
 
                     <nav class="menu-box">
-                        <div class="nav-logo"><a href="index.html"><img
+                        <div class="nav-logo"><a href="../homePage.html"><img
                                     src="../../Images/uae/logo-menu.webp" alt
                                     title></a></div>
                         <div
                             class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-                        <!--Social Links-->
-                        <!-- <div class="social-links">
-                            <ul class="clearfix">
-                                <li><a href="#"><span
-                                            class="fab fa-twitter"></span></a></li>
-                                <li><a href="#"><span
-                                            class="fab fa-facebook-square"></span></a></li>
-                                <li><a href="#"><span
-                                            class="fab fa-pinterest-p"></span></a></li>
-                                <li><a href="#"><span
-                                            class="fab fa-instagram"></span></a></li>
-                                <li><a href="#"><span
-                                            class="fab fa-youtube"></span></a></li>
-                            </ul>
-                        </div> -->
+
                     </nav>
                 </div><!-- End Mobile Menu -->
             </header>
@@ -291,11 +354,11 @@ color: #414141;
 
             <!-- Banner Section -->
 
-            <section class="banner-section">
+            <section class="banner-section ">
                 <div class="banner-carousel owl-theme owl-carousel">
                     <!-- Slide Item -->
                     <div class="slide-item rooms_slide_item">
-                        <div class="image-layer"
+                        <div class="image-layer coporate_backImage"
                             style="background-image:url(../../Images/rooms/uae/insiderooms/01.webp)"></div>
 
                         <div class="home-five-banner">
@@ -303,7 +366,8 @@ color: #414141;
                             <div class="container" style="max-width: 1300px;">
                                 <div class="row">
                                     <div class="col-xl-9 col-lg-9">
-                                        <div class="banner-content">
+                                        <div
+                                            class="banner-content banner_rooms">
                                             <!-- <h6 class="sub-title wow fadeInUp"
                                                 data-wow-delay=".2s"
                                                 data-wow-duration="1.8s">best of 2021</h6> -->
@@ -349,28 +413,58 @@ color: #414141;
                                                 class="banner-meta wow fadeInUp"
                                                 data-wow-delay=".8s"
                                                 data-wow-duration="1.8s">
+
                                                 <ul>
-                                                    <!-- <li class="quality">
-                                                        <span>Pg 18</span>
-                                                        <span>hd</span>
-                                                    </li> -->
-                                                    <!-- <li class="category">
-                                                        <a href="#">Romance,</a>
-                                                        <a href="#">Drama</a>
-                                                    </li> -->
+
                                                     <li class="release-time">
-                                                        <span>
-                                                            <i
-                                                                class="far fa-calendar-alt"></i>
-                                                            2021</span> |
-                                                        <span><i
-                                                                class="far fa-clock"></i>
-                                                            128 min</span>
-                                                        |
-                                                        <span><i
-                                                                class="far fa-clock"></i>
-                                                            128 min</span>
+                                                        <span class="flex-item">
+                                                            <img
+                                                                src="../../Images/icons/rooms_icons/Vector.webp"
+                                                                alt
+                                                                class="icon">
+                                                        </span>
+
+                                                        <span class="flex-item">
+                                                            60
+                                                        </span>
+                                                        <span class="flex-item">
+                                                            <img
+                                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                                alt>
+                                                        </span>
+
+                                                        <span class="flex-item">
+                                                            <img
+                                                                src="../../Images/icons/rooms_icons/Hammer.webp"
+                                                                alt
+                                                                class="icon">
+                                                        </span>
+
+                                                        <span class="flex-item">
+
+                                                            Hard
+
+                                                        </span>
+
+                                                        <span class="flex-item">
+                                                            <img
+                                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                                alt
+                                                                class>
+                                                        </span>
+
+                                                        <span class="flex-item">
+                                                            <img
+                                                                src="../../Images/icons/rooms_icons/People.webp"
+                                                                alt
+                                                                class="icon">
+                                                        </span>
+
+                                                        <span class="flex-item">
+                                                            2-10
+                                                        </span>
                                                     </li>
+
                                                 </ul>
                                             </div>
 
@@ -496,7 +590,10 @@ color: #414141;
                                         <span>1</span>
                                         <span>2</span>
                                         <span>3</span>
-                                        <span>4</span>
+                                        <span style=" border: 1px solid;
+                                        background:  linear-gradient(10deg, #0000 10%, #A2A2A2 90%);
+                                        ;
+                                        ">4</span>
                                         <span>5</span>
                                         <span>6</span>
                                         <span>7</span>
@@ -510,45 +607,93 @@ color: #414141;
                                 <h3>Booking</h3>
 
                                 <div class="time-slots">
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
+
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
                                     <!-- Repeat for all time slots -->
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <!-- Repeat for all time slots -->
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <!-- Repeat for all time slots -->
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
-                                    <div class="slot"><span>15:15 -
-                                            16:15</span><br>AED 220<br>per
-                                        person</div>
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+
+                                    <div class="slot">
+                                        <span>
+                                            15:15 -
+                                            16:15</span><br><span
+                                            class="slot_span_color currency_size">AED
+                                            220</span><br><span
+                                            class="slot_span_color">per
+                                            person</span>
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -584,12 +729,12 @@ color: #414141;
             <section
                 class="featured-game-area rooms_freatured_games_2 position-relative featurerooms  pt-115 pb-90 "
                 style="background-image:url(../../Images/about/aboutbackground.webp)">
-                <div class="featured-game-bg "></div>
+                <div class="featured-game-bg " style="z-index: 0;"></div>
                 <div class="container " style="max-width: 1500px;">
 
                     <div class="row featured-active ">
 
-                        <div class="custom-col grid-item wow fadeInUp"
+                        <div class=" custom-col grid-item wow fadeInUp"
                             data-wow-delay="300ms" data-wow-duration="1500ms">
                             <div class="featured-game-item mb-30">
                                 <div class="featured-game-thumb">
@@ -602,7 +747,6 @@ color: #414141;
                                         <span> With Live Actor </span>
                                     </div>
                                 </div>
-
                                 <div
                                     class="featured-game-content featured-game-overlay-content">
 
@@ -627,35 +771,56 @@ color: #414141;
 
                                     </div>
 
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-clock"></i>
-                                        <span>60 Mins</span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                    <div class="rooms_icons_button">
 
-                                        <i class="fas fa-hammer"></i>
-                                        <span> Hard </span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                        <div class="featured-game-meta">
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span>60</span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
 
-                                        <i class="fas fa-running"></i>
-                                        <span> 2- 10 </span>
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Hammer.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> Hard </span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+
+                                            <img
+                                                src="../../Images/icons/rooms_icons/People.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> 2- 10 </span>
+                                        </div>
+
+                                        <div class="link-box"><a
+                                                href="rooms/psychiatric.html"
+                                                class="theme-btn btn-style-one"><span
+                                                    class="btn-title"
+                                                    style="padding: 5px 10px;">
+                                                    SELECT GAME
+                                                </span></a></div>
+
                                     </div>
 
-                                    <br>
-
-                                    <div class="link-box"><a
-                                            href="rooms/psychiatric.html"
-                                            class="theme-btn btn-style-one"><span
-                                                class="btn-title"
-                                                style="padding: 5px 10px;">
-                                                SELECT GAME
-                                            </span></a></div>
-
                                 </div>
-
                             </div>
                         </div>
 
@@ -667,77 +832,7 @@ color: #414141;
                                         alt>
                                 </div>
                                 <div class="featured-game-content">
-                                    <!-- <h4><a href="#">JUST FOR
-                                            <span>GAMERS</span></a></h4> -->
-                                    <div class="featured-game-meta">
-                                        <!-- <i class="fas fa-bell"></i> -->
-                                        <span> With Live Actor</span>
-                                    </div>
-                                </div>
-                                <div
-                                    class="featured-game-content featured-game-overlay-content">
 
-                                    <div class="overlay_text">
-
-                                        <div>
-                                            <h2>HALLOWEEN</h2>
-
-                                            <p>
-                                                A group of friends gathered to
-                                                have fun on Halloween night and
-                                                decided to go to the escape
-                                                house together.
-                                            </p>
-                                            <p>
-                                                Even though everything seems
-                                                normal, there is something they
-                                                don't know. The address they
-                                                came to for fun is wrong!
-                                            </p>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-clock"></i>
-                                        <span>60 Mins</span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
-
-                                        <i class="fas fa-hammer"></i>
-                                        <span> Hard </span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
-
-                                        <i class="fas fa-running"></i>
-                                        <span> 2- 10 </span>
-                                    </div>
-
-                                    <br>
-
-                                    <div class="link-box"><a
-                                            href="rooms/psychiatric.html"
-                                            class="theme-btn btn-style-one"><span
-                                                class="btn-title"
-                                                style="padding: 5px 10px;">
-                                                SELECT GAME
-                                            </span></a></div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class=" custom-col grid-item wow fadeInUp"
-                            data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="featured-game-item mb-30">
-                                <div class="featured-game-thumb">
-                                    <img src="../../Images/rooms/uae/1.png" alt>
-                                </div>
-                                <div class="featured-game-content">
-                                    <!-- <h4><a href="#">JUST FOR
-                                            <span>GAMERS</span></a></h4> -->
                                     <div class="featured-game-meta">
                                         <!-- <i class="fas fa-bell"></i> -->
                                         <span> With Live Actor </span>
@@ -767,32 +862,144 @@ color: #414141;
 
                                     </div>
 
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-clock"></i>
-                                        <span>60 Mins</span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                    <div class="rooms_icons_button">
 
-                                        <i class="fas fa-hammer"></i>
-                                        <span> Hard </span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                        <div class="featured-game-meta">
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span>60</span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
 
-                                        <i class="fas fa-running"></i>
-                                        <span> 2- 10 </span>
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Hammer.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> Hard </span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+
+                                            <img
+                                                src="../../Images/icons/rooms_icons/People.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> 2- 10 </span>
+                                        </div>
+
+                                        <div class="link-box"><a
+                                                href="rooms/psychiatric.html"
+                                                class="theme-btn btn-style-one"><span
+                                                    class="btn-title"
+                                                    style="padding: 5px 10px;">
+                                                    SELECT GAME
+                                                </span></a></div>
+
                                     </div>
 
-                                    <br>
+                                </div>
+                            </div>
+                        </div>
 
-                                    <div class="link-box"><a
-                                            href="rooms/psychiatric.html"
-                                            class="theme-btn btn-style-one"><span
-                                                class="btn-title"
-                                                style="padding: 5px 10px;">
-                                                SELECT GAME
-                                            </span></a></div>
+                        <div class=" custom-col grid-item wow fadeInUp"
+                            data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="featured-game-item mb-30">
+                                <div class="featured-game-thumb">
+                                    <img src="../../Images/rooms/uae/1.png" alt>
+                                </div>
+                                <div class="featured-game-content">
+
+                                    <div class="featured-game-meta">
+                                        <!-- <i class="fas fa-bell"></i> -->
+                                        <span> With Live Actor </span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="featured-game-content featured-game-overlay-content">
+
+                                    <div class="overlay_text">
+
+                                        <div>
+                                            <h2>HALLOWEEN</h2>
+
+                                            <p>
+                                                A group of friends gathered to
+                                                have fun on Halloween night and
+                                                decided to go to the escape
+                                                house together.
+                                            </p>
+                                            <p>
+                                                Even though everything seems
+                                                normal, there is something they
+                                                don't know. The address they
+                                                came to for fun is wrong!
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="rooms_icons_button">
+
+                                        <div class="featured-game-meta">
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span>60</span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Hammer.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> Hard </span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+
+                                            <img
+                                                src="../../Images/icons/rooms_icons/People.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> 2- 10 </span>
+                                        </div>
+
+                                        <div class="link-box"><a
+                                                href="rooms/psychiatric.html"
+                                                class="theme-btn btn-style-one"><span
+                                                    class="btn-title"
+                                                    style="padding: 5px 10px;">
+                                                    SELECT GAME
+                                                </span></a></div>
+
+                                    </div>
 
                                 </div>
                             </div>
@@ -809,7 +1016,7 @@ color: #414141;
 
                                     <div class="featured-game-meta">
                                         <!-- <i class="fas fa-bell"></i> -->
-                                        <span>With Live Actor</span>
+                                        <span> With Live Actor </span>
                                     </div>
                                 </div>
                                 <div
@@ -836,32 +1043,54 @@ color: #414141;
 
                                     </div>
 
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-clock"></i>
-                                        <span>60 Mins</span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                    <div class="rooms_icons_button">
 
-                                        <i class="fas fa-hammer"></i>
-                                        <span> Hard </span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                        <div class="featured-game-meta">
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span>60</span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
 
-                                        <i class="fas fa-running"></i>
-                                        <span> 2- 10 </span>
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Hammer.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> Hard </span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+
+                                            <img
+                                                src="../../Images/icons/rooms_icons/People.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> 2- 10 </span>
+                                        </div>
+
+                                        <div class="link-box"><a
+                                                href="rooms/psychiatric.html"
+                                                class="theme-btn btn-style-one"><span
+                                                    class="btn-title"
+                                                    style="padding: 5px 10px;">
+                                                    SELECT GAME
+                                                </span></a></div>
+
                                     </div>
-
-                                    <br>
-
-                                    <div class="link-box"><a
-                                            href="rooms/psychiatric.html"
-                                            class="theme-btn btn-style-one"><span
-                                                class="btn-title"
-                                                style="padding: 5px 10px;">
-                                                SELECT GAME
-                                            </span></a></div>
 
                                 </div>
                             </div>
@@ -905,32 +1134,54 @@ color: #414141;
 
                                     </div>
 
-                                    <div class="featured-game-meta">
-                                        <i class="fas fa-clock"></i>
-                                        <span>60 Mins</span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                    <div class="rooms_icons_button">
 
-                                        <i class="fas fa-hammer"></i>
-                                        <span> Hard </span>
-                                        &nbsp;
-                                        |
-                                        &nbsp;
+                                        <div class="featured-game-meta">
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span>60</span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
 
-                                        <i class="fas fa-running"></i>
-                                        <span> 2- 10 </span>
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Hammer.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> Hard </span>
+                                            &nbsp;
+                                            &nbsp;
+                                            <img
+                                                src="../../Images/icons/rooms_icons/Vector2.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+
+                                            <img
+                                                src="../../Images/icons/rooms_icons/People.webp"
+                                                alt>
+                                            &nbsp;
+                                            &nbsp;
+                                            <span> 2- 10 </span>
+                                        </div>
+
+                                        <div class="link-box"><a
+                                                href="rooms/psychiatric.html"
+                                                class="theme-btn btn-style-one"><span
+                                                    class="btn-title"
+                                                    style="padding: 5px 10px;">
+                                                    SELECT GAME
+                                                </span></a></div>
+
                                     </div>
-
-                                    <br>
-
-                                    <div class="link-box"><a
-                                            href="rooms/psychiatric.html"
-                                            class="theme-btn btn-style-one"><span
-                                                class="btn-title"
-                                                style="padding: 5px 10px;">
-                                                SELECT GAME
-                                            </span></a></div>
 
                                 </div>
                             </div>
@@ -944,10 +1195,11 @@ color: #414141;
 
             <!-- footer start -->
 
-            <footer class="main_footer rooms_games_footer">
+            <footer class="main_footer contact_info_footer">
 
                 <!-- <div class="top-pattern-layer-dark_footer"></div> -->
-                <div class="footer-top footer-bg s-footer-bg">
+                <div
+                    class="footer-top footer-bg s-footer-bg price_list_s_footer">
                     <!-- newsletter-area -->
 
                     <!-- newsletter-area-end -->
@@ -955,10 +1207,11 @@ color: #414141;
                         <div class="row justify-content-between">
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-50">
-                                    <!-- <div class="footer-logo mb-35">
-                                        <a href="index.html"><img
-                                                src="img/logo/logo.png" alt></a>
-                                    </div> -->
+
+                                    <div class="fw-title mb-35">
+                                        <h5>Contact </h5>
+                                    </div>
+
                                     <div class="footer-text">
                                         <p> Road, Jumeirah 3, Dubai-United Arab
                                             Emirates</p>
@@ -1003,17 +1256,6 @@ color: #414141;
                                                         info@escapehouse.com
                                                     </span></li>
 
-                                                <!-- <li><i
-                                                        class="fas fa-headphones"></i>
-                                                    <span>Phone : </span>+24
-                                                    1245
-                                                    654 235</li> -->
-                                                <!-- <li><i
-                                                        class="fas fa-envelope-open"></i><span>Email
-                                                        : </span><a
-                                                        href="https://themebeyond.com/cdn-cgi/l/email-protection"
-                                                        class="__cf_email__"
-                                                        data-cfemail="d5bcbbb3ba95b0adb0b8a5b9b0fbb6bab8">[email&#160;protected]</a></li> -->
                                             </ul>
                                         </div>
                                     </div>
@@ -1021,6 +1263,10 @@ color: #414141;
                             </div>
                             <div class="col-xl-2 col-lg-3 col-sm-6">
                                 <div class="footer-widget mb-50">
+
+                                    <div class="fw-title mb-35">
+                                        <h5>Rooms </h5>
+                                    </div>
 
                                     <div class="fw-link">
                                         <ul>
@@ -1042,6 +1288,10 @@ color: #414141;
                             <div class="col-xl-2 col-lg-3 col-sm-6">
                                 <div class="footer-widget mb-50">
 
+                                    <div class="fw-title mb-35">
+                                        <h5>Need Help </h5>
+                                    </div>
+
                                     <div class="fw-link">
                                         <ul>
                                             <li><a href="#">Privacy Policy
@@ -1057,22 +1307,56 @@ color: #414141;
                             </div>
                             <div class="col-xl-3 col-lg-4 col-md-6">
                                 <div class="footer-widget mb-50">
+
+                                    <div class="fw-title mb-35">
+                                        <h5>Working Hours</h5>
+                                    </div>
+
+                                    <div class="fw-link">
+                                        <ul>
+                                            <li><a href="#"> Dubai: 10:00AM -
+                                                    03:00AM
+                                                </a></li>
+
+                                        </ul>
+                                    </div>
+
                                     <div class="fw-title mb-35">
                                         <h5>Follow us</h5>
                                     </div>
                                     <div class="footer-social">
+
+
                                         <ul>
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/YouTube.webp"
+                                                        alt
+                                                        class="footer_social">
 
-                                            <li><a href="#"><i
-                                                        class="fab fa-youtube"></i></a></li>
+                                                </a></li>
 
-                                            <li><a href="#"><i
-                                                        class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i
-                                                        class="fab fa-instagram"></i></a></li>
-                                            <li><a href="#"><i
-                                                        class="fab fa-whatsapp"></i></a></li>
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/Facebook.webp"
+                                                        alt
+                                                        class="footer_social">
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/Instagram.webp"
+                                                        alt
+                                                        class="footer_social">
+                                                </a></li>
+                                            <li><a href="#">
+                                                    <img
+                                                        src="../../Images/socialmedia/Group23.webp"
+                                                        alt
+                                                        class="footer_social">
+                                                </a></li>
                                         </ul>
+
+
                                     </div>
                                 </div>
 
@@ -1101,7 +1385,7 @@ color: #414141;
                                 <div class="col-lg-4 col-md-6">
                                     <div class="payment-method-img text-right">
                                         <img
-                                            src="../../images/footer/escape-footer-logo.webp"
+                                            src="../../Images/footer/escape-footer-logo.webp"
                                             alt="img">
                                     </div>
 
@@ -1111,7 +1395,7 @@ color: #414141;
                                     class="col-lg-4 col-md-6 d-none d-md-block">
                                     <div class="payment-method-img text-right">
                                         <img
-                                            src="../../images/footer/card_img.png"
+                                            src="../../Images/footer/card_img.png"
                                             alt="img">
                                     </div>
                                 </div>
@@ -1140,11 +1424,93 @@ color: #414141;
 
         <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
         <script>
+            // flatpickr("#calendar", {
+            //     dateFormat: "Y-m-d",
+            //     defaultDate: "2024-04-01",
+            //     inline: true,
+            // });
+
+
             flatpickr("#calendar", {
                 dateFormat: "Y-m-d",
                 defaultDate: "2024-04-01",
-                inline: true
-            });
+                inline: true,
+
+    monthSelectorType: "static", // Use static to prevent default dropdown
+    onReady: function (selectedDates, dateStr, instance) {
+        // Create custom header
+        const customHeader = document.createElement('div');
+        customHeader.className = 'flatpickr-custom-header';
+        customHeader.innerHTML = `
+            <span class="current-year-month"></span>
+            <div class="nav-icons">
+                <span class="flatpickr-prev-month">
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.3379 2.14279C11.7302 1.77689 12.098 1.52832 12.5192 1.4378C14.383 1.32766 16.2486 1.34703 18.1335 1.36659C19.1254 1.37689 20.1226 1.38724 21.1277 1.37881L21.137 1.37874L21.1463 1.37836C21.4258 1.36717 21.5826 1.47255 21.6304 1.53521C21.6497 1.56062 21.6566 1.58275 21.6559 1.6111C21.6552 1.64164 21.6439 1.71191 21.5722 1.82101C21.3182 2.1286 21.0198 2.42698 20.6958 2.74026C20.6358 2.79832 20.5746 2.85713 20.5127 2.91661C20.2441 3.17481 19.9623 3.44569 19.7028 3.72327C18.7549 4.6654 17.7945 5.61364 16.8353 6.56066L16.8225 6.57328C15.8652 7.51844 14.9092 8.46237 13.9693 9.39645L13.9565 9.40921L13.9444 9.42274C13.6867 9.71248 13.4054 9.97298 13.1018 10.2541C13.019 10.3308 12.9346 10.409 12.8485 10.4897C12.4606 10.8536 12.0515 11.2594 11.7227 11.7474L11.7078 11.7696L11.6949 11.793C11.4762 12.1914 11.5761 12.5742 11.7123 12.8286C11.8314 13.0509 12.0106 13.2395 12.1141 13.3484C12.1186 13.3531 12.1229 13.3576 12.127 13.362L12.127 13.362L12.1313 13.3664C12.5381 13.7865 12.9616 14.1931 13.378 14.5929C13.396 14.6102 13.4141 14.6275 13.4321 14.6448L13.5595 14.772C14.8441 16.0543 16.098 17.306 17.3847 18.5555C18.0499 19.2295 18.7096 19.8808 19.3658 20.5287C19.7988 20.9561 20.2302 21.3821 20.6608 21.8121C20.7722 21.9328 20.9069 22.0599 21.0272 22.1735C21.0617 22.206 21.0951 22.2375 21.1263 22.2674C21.2839 22.4179 21.414 22.5506 21.5104 22.6788C21.6074 22.8079 21.6412 22.8951 21.6494 22.9493C21.654 22.9796 21.6558 23.0239 21.6142 23.0989C21.5613 23.1506 21.5078 23.1717 21.4044 23.1838C21.3292 23.1926 21.2391 23.1943 21.1106 23.1929C21.0859 23.1927 21.0595 23.1923 21.0317 23.1919C20.9285 23.1903 20.8061 23.1885 20.6806 23.1917C19.5984 23.187 18.2156 23.2054 16.8879 23.2232C15.2226 23.2454 13.6441 23.2665 12.8542 23.2392C12.3104 23.2097 11.7192 22.8196 11.0461 22.1767C10.759 21.9025 10.481 21.6068 10.2005 21.3085C10.1628 21.2685 10.1251 21.2284 10.0874 21.1883C9.78208 20.8643 9.46753 20.5351 9.15912 20.2687C8.58713 19.6923 8.05335 19.1678 7.52415 18.6478C7.12805 18.2587 6.73452 17.872 6.32945 17.468L6.32814 17.4667C5.28914 16.4368 4.25954 15.4177 3.22058 14.3906C2.97632 14.1473 2.72633 13.9006 2.48036 13.6579C2.40398 13.5826 2.32799 13.5076 2.25269 13.4332L2.2528 13.4331L2.24279 13.4237C1.79192 12.9987 1.54831 12.7083 1.53195 12.3201C1.53534 11.9929 1.71534 11.6822 2.07942 11.304C2.23172 11.1458 2.39628 10.9954 2.5738 10.8331C2.60826 10.8016 2.64321 10.7697 2.67865 10.7372C2.8798 10.5525 3.09817 10.3476 3.28339 10.1281C3.96648 9.45438 4.64881 8.77806 5.32971 8.10316C5.50334 7.93106 5.67687 7.75905 5.8503 7.5872C6.61372 6.833 7.37735 6.07588 8.14069 5.31904C8.78997 4.67529 9.43905 4.03174 10.0876 3.39037C10.3177 3.18644 10.5339 2.9628 10.7345 2.75309C10.7529 2.73387 10.7712 2.71476 10.7894 2.69578C10.9783 2.49817 11.1546 2.31381 11.3379 2.14279Z" stroke="white" stroke-width="1.17633"/>
+</svg>
+                </span>
+                <span class="flatpickr-next-month">
+                    <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.0801 2.14279C10.6878 1.77689 10.32 1.52832 9.89879 1.4378C8.03501 1.32766 6.16942 1.34703 4.28442 1.36659C3.29258 1.37689 2.29538 1.38724 1.29024 1.37881L1.28093 1.37874L1.27162 1.37836C0.99219 1.36717 0.835324 1.47255 0.787582 1.53521C0.768222 1.56062 0.761344 1.58275 0.762042 1.6111C0.762793 1.64164 0.774021 1.71191 0.845784 1.82101C1.09973 2.1286 1.39814 2.42698 1.72213 2.74026C1.78217 2.79832 1.84335 2.85713 1.90523 2.91661C2.17385 3.17481 2.45566 3.44569 2.71513 3.72327C3.6631 4.6654 4.62348 5.61364 5.58266 6.56066L5.59544 6.57328C6.55273 7.51844 7.50878 8.46237 8.44865 9.39645L8.46149 9.40921L8.47352 9.42274C8.73123 9.71248 9.01254 9.97298 9.31615 10.2541C9.39893 10.3308 9.48336 10.409 9.56943 10.4897C9.95734 10.8536 10.3664 11.2594 10.6953 11.7474L10.7102 11.7696L10.723 11.793C10.9418 12.1914 10.8419 12.5742 10.7057 12.8286C10.5866 13.0509 10.4073 13.2395 10.3038 13.3484C10.2994 13.3531 10.2951 13.3576 10.2909 13.362L10.291 13.362L10.2867 13.3664C9.87982 13.7865 9.45635 14.1931 9.03996 14.5929C9.02193 14.6102 9.0039 14.6275 8.98589 14.6448L8.85842 14.772C7.57388 16.0543 6.32002 17.306 5.03327 18.5555C4.36811 19.2295 3.70841 19.8808 3.05214 20.5287C2.6192 20.9561 2.18775 21.3821 1.7572 21.8121C1.64579 21.9328 1.51111 22.0599 1.39077 22.1735C1.35625 22.206 1.32291 22.2375 1.29163 22.2674C1.1341 22.4179 1.00395 22.5506 0.907577 22.6788C0.810571 22.8079 0.776816 22.8951 0.768609 22.9493C0.764008 22.9796 0.762122 23.0239 0.803791 23.0989C0.856629 23.1506 0.910212 23.1717 1.01359 23.1838C1.08875 23.1926 1.17891 23.1943 1.30737 23.1929C1.33207 23.1927 1.35848 23.1923 1.38629 23.1919C1.48947 23.1903 1.6119 23.1885 1.73733 23.1917C2.81958 23.187 4.2024 23.2054 5.53009 23.2232C7.19533 23.2454 8.77384 23.2665 9.5638 23.2392C10.1075 23.2097 10.6988 22.8196 11.3718 22.1767C11.659 21.9025 11.937 21.6068 12.2175 21.3085C12.2552 21.2685 12.2928 21.2284 12.3306 21.1883C12.6359 20.8643 12.9504 20.5351 13.2589 20.2687C13.8308 19.6923 14.3646 19.1678 14.8938 18.6478C15.2899 18.2587 15.6834 17.872 16.0885 17.468L16.0898 17.4667C17.1288 16.4368 18.1584 15.4177 19.1974 14.3906C19.4416 14.1473 19.6916 13.9006 19.9376 13.6579C20.014 13.5826 20.09 13.5076 20.1653 13.4332L20.1652 13.4331L20.1752 13.4237C20.626 12.9987 20.8697 12.7083 20.886 12.3201C20.8826 11.9929 20.7026 11.6822 20.3386 11.304C20.1862 11.1458 20.0217 10.9954 19.8442 10.8331C19.8097 10.8016 19.7748 10.7697 19.7393 10.7372C19.5382 10.5525 19.3198 10.3476 19.1346 10.1281C18.4515 9.45438 17.7692 8.77806 17.0883 8.10316C16.9146 7.93106 16.7411 7.75905 16.5677 7.5872C15.8043 6.833 15.0406 6.07588 14.2773 5.31904C13.628 4.67529 12.9789 4.03174 12.3304 3.39037C12.1003 3.18644 11.8841 2.9628 11.6834 2.75309C11.665 2.73387 11.6468 2.71476 11.6286 2.69578C11.4397 2.49817 11.2634 2.31381 11.0801 2.14279Z" stroke="white" stroke-width="1.17633"/>
+</svg>
+                </span>
+            </div>
+        `;
+
+        // Append custom header to Flatpickr calendar
+        const calendarContainer = instance.calendarContainer;
+        calendarContainer.insertBefore(
+            customHeader,
+            calendarContainer.querySelector(".flatpickr-months")
+        );
+
+        // Hide the default month dropdown
+        const defaultMonthContainer = calendarContainer.querySelector(".flatpickr-months");
+        if (defaultMonthContainer) {
+            defaultMonthContainer.style.display = "none";
+        }
+
+        // Add event listeners for navigation buttons
+        customHeader.querySelector('.flatpickr-prev-month').addEventListener('click', function() {
+            instance.changeMonth(-1);
+            updateCustomHeader(instance); // Update header after month change
+        });
+
+        customHeader.querySelector('.flatpickr-next-month').addEventListener('click', function() {
+            instance.changeMonth(1);
+            updateCustomHeader(instance); // Update header after month change
+        });
+
+        // Update the month and year on open
+        updateCustomHeader(instance);
+    }
+});
+
+// Function to update custom header with current month and year
+function updateCustomHeader(instance) {
+    const currentMonth = instance.currentMonth; // 0-based index for month
+    const currentYear = instance.currentYear;
+    const months = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    const yearMonthElement = instance.calendarContainer.querySelector(".current-year-month");
+    if (yearMonthElement) {
+        yearMonthElement.textContent = `${currentYear} ${months[currentMonth].toUpperCase()}`;
+    }
+}
+
+
+
+
+           
+
+
+            
+
+
+            
         </script>
 
         <!-- end of cdn needed -->
