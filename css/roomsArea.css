@@ -57,12 +57,12 @@
 
 .btn-style-two {
 
-    background: radial-gradient(70.66% 70.66% at 50% 50%, #29D8FF 0%, #006E86 100%);
+    /* background: radial-gradient(70.66% 70.66% at 50% 50%, #29D8FF 0%, #006E86 100%); */
     color: #fff;
     border-radius: 10px;
-    box-shadow: rgba(41, 216, 255, 0.56) 0px 22px 70px 4px;
+    /* box-shadow: rgba(41, 216, 255, 0.56) 0px 22px 70px 4px; */
     padding: 05px 30px;
-    border: 1px solid rgba(8, 210, 255, 1);
+    /* border: 1px solid rgba(8, 210, 255, 1); */
     font-size: 18px;
     font-weight: 700;
     margin-top: 20px;
